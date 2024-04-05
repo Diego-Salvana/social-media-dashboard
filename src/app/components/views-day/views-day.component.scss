@@ -1,0 +1,41 @@
+@use '../../sass/variables';
+
+.card {
+   background-color: var(--card-bg);
+   border-radius: 4px;
+   padding: 26px 30px 20px 25px;
+   transition: variables.$TransitionColors;
+
+   &__network {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-color-secondary);
+      margin-bottom: 21px;
+   }
+
+   &__views {
+      .views-number {
+         font-weight: 700;
+         font-size: 32px;
+         color: var(--text-color-primary);
+      }
+
+      .variation {
+         column-gap: 3px;
+         font-weight: 700;
+         font-size: 12px;
+         padding-top: 15px;
+         color: variables.$LimeGreen;
+      }
+
+      .red-text {
+         color: variables.$BrightRed;
+      }
+   }
+}
+
+.flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}

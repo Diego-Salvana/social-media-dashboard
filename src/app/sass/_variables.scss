@@ -1,0 +1,56 @@
+@font-face {
+   font-family: Inter;
+   src: url('../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+// Layouts
+$isDesktop: 1440px;
+$mainPadding: (
+   small: 25px,
+   medium: 50px,
+   large: 165px,
+);
+
+// Colors
+$LimeGreen: hsl(163, 72%, 41%);
+$BrightRed: hsl(356, 69%, 56%);
+
+$FacebookColor: hsl(208, 92%, 53%);
+$TwitterColor: hsl(203, 89%, 53%);
+$InstagramColor: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$YouTubeColor: hsl(348, 97%, 39%);
+
+// Light Theme
+$ToggleLightTheme: hsl(230, 22%, 74%);
+$White: hsl(0, 0%, 100%); // BG
+$VeryPaleBlue: hsl(225, 100%, 98%); // (Top BG Pattern)
+$LightGrayishBlue: hsl(227, 47%, 96%); // (Card BG)
+$DarkGrayishBlue: hsl(228, 12%, 44%); //  (Text)
+$VeryDarkBlue: hsl(230, 17%, 14%); // (Text)
+
+// Dark Theme
+$ToggleDarkTheme: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$VeryDarkBlueTopBG: hsl(232, 19%, 15%); // (Top BG Pattern)
+$DarkDesaturatedBlue: hsl(228, 28%, 20%); // (Card BG)
+$DesaturatedBlue: hsl(228, 34%, 66%); // (Text)
+
+// Transitions
+$TransitionColors: background 0.2s linear, color 0.2s linear;
+
+:root {
+   --body-bg: #{$White};
+   --top-bg-pattern: #{$VeryPaleBlue};
+   --card-bg: #{$LightGrayishBlue};
+   --toggle-btn-bg: #{$ToggleLightTheme};
+   --text-color-primary: #{$VeryDarkBlue};
+   --text-color-secondary: #{$DarkGrayishBlue};
+}
+
+:root.darkMode {
+   --body-bg: #{$VeryDarkBlue};
+   --top-bg-pattern: #{$VeryDarkBlueTopBG};
+   --card-bg: #{$DarkDesaturatedBlue};
+   --toggle-btn-bg: #{$ToggleDarkTheme};
+   --text-color-primary: #{$White};
+   --text-color-secondary: #{$DesaturatedBlue};
+}

@@ -1,0 +1,106 @@
+@use '../../sass/variables';
+:host {
+   display: block;
+   background-color: var(--top-bg-pattern);
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+   transition: variables.$TransitionColors;
+}
+
+header {
+   padding: 36px map-get(variables.$mainPadding, small) 85px;
+   display: flex;
+   flex-direction: column;
+   max-width: 2100px;
+   margin: auto;
+}
+
+.title {
+   color: var(--text-color-primary);
+   font-weight: 700;
+   font-size: 24px;
+   margin-bottom: 5px;
+}
+
+.followers {
+   color: var(--text-color-secondary);
+   font-weight: 700;
+   font-size: 14px;
+}
+
+.separator {
+   height: 1px;
+   background-color: var(--text-color-secondary);
+   margin: 24px 0 15px;
+}
+
+.dark-mode {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+
+   label {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text-color-secondary);
+   }
+
+   &__switch {
+      width: 50px;
+      height: 24px;
+      display: inline-flex;
+      justify-content: flex-end;
+      background: var(--toggle-btn-bg);
+      border-radius: 30px;
+      padding: 3px;
+      transition: variables.$TransitionColors;
+      position: relative;
+
+      &:hover {
+         cursor: pointer;
+      }
+
+      &.dark {
+         justify-content: flex-start;
+      }
+
+      .ball {
+         height: 100%;
+         aspect-ratio: 1;
+         background-color: var(--body-bg);
+         border-radius: 50%;
+      }
+   }
+}
+
+@media (min-width: 600px) {
+   header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+   }
+
+   .dark-mode {
+      transform: translateY(4px);
+   }
+}
+
+@media (min-width: 900px) {
+   header {
+      padding-left: map-get(variables.$mainPadding, medium);
+      padding-right: map-get(variables.$mainPadding, medium);
+   }
+}
+
+@media (min-width: 1440px) {
+   header {
+      padding-left: map-get(variables.$mainPadding, large);
+      padding-right: map-get(variables.$mainPadding, large);
+      padding-bottom: 152px;
+   }
+
+   .title {
+      font-size: 26px;
+   }
+}

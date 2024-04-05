@@ -1,0 +1,59 @@
+@use './sass/variables';
+
+main {
+   padding: 0 map-get(variables.$mainPadding, small);
+   position: relative;
+   top: -45px;
+   max-width: 2100px;
+   margin: auto;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 25px;
+}
+
+.subtitle {
+   font-size: 24px;
+   font-weight: 700;
+   color: var(--text-color-primary);
+   margin: 46px 0 28px;
+}
+
+.views {
+   row-gap: 16px;
+}
+
+@media (min-width: 600px) {
+   .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .views {
+      row-gap: 25px;
+   }
+}
+
+@media (min-width: 900px) {
+   main {
+      padding: 0 map-get(variables.$mainPadding, medium);
+   }
+}
+
+@media (min-width: 1100px) {
+   .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
+
+@media (min-width: 1440px) {
+   main {
+      padding: 0 map-get(variables.$mainPadding, large);
+      top: -107px;
+   }
+
+   .subtitle {
+      margin-bottom: 25px;
+   }
+}

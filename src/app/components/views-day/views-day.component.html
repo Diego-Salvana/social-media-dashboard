@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card__network flex">
+    <span>{{ viewType }}</span>
+    <img [src]="socialNetworkIcon" />
+  </div>
+
+  <div class="card__views flex">
+    <p class="views-number">{{ views }}</p>
+
+    <div class="variation flex" [class.red-text]="viewsVariation < 0">
+      @if (viewsVariation < 0) {
+        <img src="../../../assets/icons/icon-down.svg" />
+      } @else {
+        <img src="../../../assets/icons/icon-up.svg" />
+      }
+
+      <span>
+        {{ viewsVariation < 0 ? viewsVariation * -1 : viewsVariation }}%
+      </span>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="card">
+  <header #borderTop class="border-top"></header>
+
+  <div class="card__user-name">
+    <img [src]="socialNetworkIcon" />
+    <span>{{ userName }}</span>
+  </div>
+
+  <div class="card__followers">
+    <p class="number">{{ followers }}</p>
+    <p class="text">{{ description | uppercase }}</p>
+  </div>
+
+  <div class="card__variation" [class.red-text]="followersVariation < 0">
+    @if (followersVariation < 0) {
+    <img src="../../../assets/icons/icon-down.svg" />
+    } @else {
+    <img src="../../../assets/icons/icon-up.svg" />
+    }
+    <span>
+      {{ followersVariation < 0 ? followersVariation * -1 : followersVariation }}
+    </span>
+    <span>Today</span>
+  </div>
+</div>
