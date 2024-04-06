@@ -49,27 +49,28 @@ header {
    &__switch {
       width: 50px;
       height: 24px;
-      display: inline-flex;
-      justify-content: flex-end;
       background: var(--toggle-btn-bg);
       border-radius: 30px;
       padding: 3px;
-      transition: variables.$TransitionColors;
       position: relative;
 
       &:hover {
          cursor: pointer;
       }
 
-      &.dark {
-         justify-content: flex-start;
-      }
-
-      .ball {
-         height: 100%;
+      &::before {
+         content: '';
+         height: 18px;
          aspect-ratio: 1;
          background-color: var(--body-bg);
          border-radius: 50%;
+         position: absolute;
+         right: 3px;
+         transition: right 0.1s linear;
+      }
+
+      &.dark::before {
+         right: calc(100% - 21px);
       }
    }
 }
