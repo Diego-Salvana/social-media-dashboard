@@ -3,7 +3,7 @@ import { NetworkFollowers, ViewsDay } from '../interfaces';
 export const socialNetworkList: NetworkFollowers[] = [
    {
       userName: '@nathanf',
-      socialNetworkIcon: '../../../assets/icons/icon-facebook.svg',
+      socialNetworkIcon: './assets/icons/icon-facebook.svg',
       followersNumber: '1987',
       followersType: 'Followers',
       variationNumber: 12,
@@ -11,7 +11,7 @@ export const socialNetworkList: NetworkFollowers[] = [
    },
    {
       userName: '@nathanf',
-      socialNetworkIcon: '../../../assets/icons/icon-twitter.svg',
+      socialNetworkIcon: '/assets/icons/icon-twitter.svg',
       followersNumber: '1044',
       followersType: 'Followers',
       variationNumber: 99,
@@ -19,7 +19,7 @@ export const socialNetworkList: NetworkFollowers[] = [
    },
    {
       userName: '@realnathanf',
-      socialNetworkIcon: '../../../assets/icons/icon-instagram.svg',
+      socialNetworkIcon: 'favicon.ico',
       followersNumber: '11k',
       followersType: 'Followers',
       variationNumber: 1099,
@@ -27,7 +27,7 @@ export const socialNetworkList: NetworkFollowers[] = [
    },
    {
       userName: 'Nathan F.',
-      socialNetworkIcon: '../../../assets/icons/icon-youtube.svg',
+      socialNetworkIcon: './favicon.ico',
       followersNumber: '8239',
       followersType: 'Subscribers',
       variationNumber: -144,
